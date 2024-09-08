@@ -5,15 +5,13 @@ import { signInValidationSchema } from "./validation";
 const SignIn=()=>{
    
 return <>
-
-hello world from sign in page
-
-
-
-<br/><hr/>
-<div>
-     <h1>Anywhere in your app!</h1>
-     <Formik
+<div className="flex max-h-full ">
+<div className="bg-zinc-300 h-[50vh] w-[50vw] m-[auto] mt-[10%]">
+   <h1>
+   SignIn 
+   </h1> 
+  <div>
+  <Formik
        initialValues={{ email: '', password: '' }}
     validationSchema={signInValidationSchema}
        
@@ -37,8 +35,15 @@ hello world from sign in page
          /* and other goodies */
        }) => (
          <Form onSubmit={handleSubmit}>
+
+
+
+
+           <div className="flex flex-col">
             {/* email: */}
-           <input
+            <div>
+            <h1>Email</h1>
+            <input
            className="bg-blue-500"
              type="email"
              name="email"
@@ -46,10 +51,13 @@ hello world from sign in page
              onChange={handleChange}
              onBlur={handleBlur}
              value={values.email}
-           /><br/>
+           />
+           
            {errors.email && touched.email && errors.email}
-           password
-           <input
+            </div>
+            <div>
+            <h1>password</h1>
+            <input
              type="password"
              name="password"
              onChange={handleChange}
@@ -57,12 +65,23 @@ hello world from sign in page
              value={values.password}
            />
            {errors.password && touched.password && errors.password}
-           <br/><button type="submit" disabled={isSubmitting}>
+            </div>
+           
+         
+           <button type="submit" disabled={isSubmitting}>
              Submit
            </button>
+
+           </div>
+          
          </Form>
        )}
      </Formik>
-   </div></>
+  </div>
+</div>
+</div>
+
+
+</>
 }
 export default SignIn;

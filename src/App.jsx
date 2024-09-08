@@ -3,8 +3,8 @@ import LandingPage from "./App/LandingPage";
 import SingleProduct from "./App/SingleProduct";
 import NavBar from "./components/navBar";
 // import Footer from "./components/footer";
-import SignIn from "./Authorization/signIn";
-import SignUp from "./Authorization/signUp";
+import SignIn from "./Authorization/sign";
+import Register from "./Authorization/register";
 
 const App=()=>{
     const router= createBrowserRouter([
@@ -21,8 +21,8 @@ const App=()=>{
             element: <SignIn/> 
         },
         {
-            path:"/signup",
-            element: <SignUp/> 
+            path:"/register",
+            element: <Register/> 
         },
     ])
 
