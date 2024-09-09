@@ -1,16 +1,55 @@
-import { Image } from "antd";
+import { Link } from "react-router-dom";
+import { Products } from "../Data/Products";
 
-const LandingPage=()=>{
-    return<>
-    this is landing page
-    <div className="flex flex-col
-bg-xinc-100 h-auto w-[30vw] p-4
-border-2 border-black rounded-md
-    ">
-    <Image width={200} height={200} alt=" product"src="../src/images/camera.jpg"/>
- 
-<price className="text-green-600 font-bold">Rs 2000</price>
-        </div>
+const LandingPage = () => {
+    // const productEntries = Object.entries(Products); // Convert object into an array of key-value pairs
+const product=Object.entries(Products);
+    return (
+        <>
+        
+            <div>
+                <ul className="grid grid-cols-5">
+                    {product.map(( [key,product], index) => (
+
+
+
+                    <Link key={product._id} href={`/product/${product._id}`}>
+
+                        <li key={product.id}>
+                            <div className="bg-zinc-500 m-2 h-[50vh] w-[15vw] 
+                            rounded-lg border-solid border-2">
+                            <div className="h-[80%] bg-white">  
+                                <img 
+                                 src={product.image}
+                                 alt="Placeholder"
+                                 className="object-contain
+                                  w-[100%] h-[100%] "
+                              />
+                             </div>
+          
+          
+          
+          <div className=" h-[20%] grid grid-row-2 ">
+
+            
+                            <div className="text-md text-center font-semibold h-[10%]">
+                            { product.name}
+                                </div>
+                                <div className="text-green-400  h-[10%] flex justify-around align-middle">Price: Rs. {product.price}</div>
+
+                                </div>
+                            </div>
+                           
+                    
+                             {/* {JSON.stringify(value)} */}
+                        </li>
+                    </Link>
+
+                    ))};
+                </ul>
+            </div>
         </>
-}
+    );
+};
+
 export default LandingPage;

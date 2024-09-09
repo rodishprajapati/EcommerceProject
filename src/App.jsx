@@ -13,7 +13,7 @@ const App=()=>{
             element:<LandingPage/>
         },
         {
-            path:"/singleProduct",
+            path:"/:id",
             element: <SingleProduct/> 
         },
         {

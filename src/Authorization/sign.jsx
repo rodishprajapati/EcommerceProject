@@ -1,9 +1,10 @@
 
-
+import { useNavigate } from "react-router-dom";
 import { Form, Formik } from "formik";
 import { signInValidationSchema } from "./validation";
 
 const SignIn=()=>{
+  const navigate=useNavigate();
     return <>
     {/* main box */}
    <div className="h-screen bg-zinc-500
@@ -17,7 +18,7 @@ const SignIn=()=>{
 
 {/* login Form Box */}
 <div className=" flex justify-center h-full align-middle">
-Sign Up
+Sign In
 </div>
 <div className="bg-white  w-[70%] ml-[15%] 
 row-span-3 align-middle items-center
@@ -37,6 +38,7 @@ flex ">
         //    alert(JSON.stringify(values, null, 2));
            console.log(JSON.stringify(values, null, 2));
            setSubmitting(false);
+           navigate("/");
          }, 400);
        }}
        

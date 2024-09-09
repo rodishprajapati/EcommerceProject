@@ -1,7 +1,7 @@
 import {  Image } from "antd";
 import AddToCart from "../components/addToCart";
 
-const SingleProduct=()=>{
+const SingleProduct=(id)=>{
     // const addToCart=()=>{
     //     <AddToCart/>
     // }
