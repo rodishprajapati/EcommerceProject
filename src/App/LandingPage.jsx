@@ -13,7 +13,7 @@ const product=Object.entries(Products);
 
 
 
-                    <Link key={product._id} href={`/product/${product._id}`}>
+                    <Link key={product.id} to={`/product/${product.id}`}>
 
                         <li key={product.id}>
                             <div className="bg-zinc-500 m-2 h-[50vh] w-[15vw] 

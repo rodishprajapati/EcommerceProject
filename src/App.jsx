@@ -1,10 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LandingPage from "./App/LandingPage";
-import SingleProduct from "./App/SingleProduct";
 import NavBar from "./components/navBar";
 // import Footer from "./components/footer";
 import SignIn from "./Authorization/sign";
 import Register from "./Authorization/register";
+import SingleProduct from "./App/productDetail";
 
 const App=()=>{
     const router= createBrowserRouter([
@@ -13,7 +13,7 @@ const App=()=>{
             element:<LandingPage/>
         },
         {
-            path:"/:id",
+            path:"/product/:id",
             element: <SingleProduct/> 
         },
         {
