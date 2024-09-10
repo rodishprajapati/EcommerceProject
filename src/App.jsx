@@ -5,6 +5,7 @@ import NavBar from "./components/navBar";
 import SignIn from "./Authorization/sign";
 import Register from "./Authorization/register";
 import SingleProduct from "./App/productDetail";
+import ProductTable from "./App/productTable";
 
 const App=()=>{
     const router= createBrowserRouter([
@@ -23,6 +24,10 @@ const App=()=>{
         {
             path:"/register",
             element: <Register/> 
+        },
+        {
+            path:"/table",
+            element: <ProductTable/> 
         },
     ])
 
