@@ -1,7 +1,7 @@
 export const Products = [
     {
       id: 101,
-      name: "Wireless Bluetooth Headphones",
+      name: "Bluetooth Headphones",
       image:"../src/images/headphone.jpg",
       description: "High-quality wireless Bluetooth headphones with noise cancellation and 20-hour battery life.",
       price: 99.99,
@@ -10,6 +10,7 @@ export const Products = [
       brand: "AudioPro",
       stock: 150,
       rating: 4.5,
+      isFavorite:false,
       reviews: [
         {
           userId: 201,
@@ -57,6 +58,7 @@ export const Products = [
       category: "Electronics",
       brand: "VisionTech",
       stock: 80,
+      isFavorite:false,
       rating: 4.7,
       reviews: [
         {
@@ -107,6 +109,7 @@ export const Products = [
       brand: "GigaTech",
       stock: 50,
       rating: 4.8,
+      isFavorite:false,
       reviews: [
         {
           userId: 205,
@@ -156,6 +159,7 @@ export const Products = [
       brand: "PhonePro",
       stock: 200,
       rating: 4.6,
+      isFavorite:false,
       reviews: [
         {
           userId: 207,
